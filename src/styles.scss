@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./variables.scss";
+
+@font-face {
+    font-family: Header_font;
+    src: url("../src/assets/fonts/Merriweather/Merriweather-Black.ttf");
+  }
+  
+  @font-face {
+    font-family: regular_font;
+    src: url("../src/assets/fonts/Libre_Franklin/LibreFranklin-Medium.ttf");
+  }
+  
+
+ body {
+     background-color: $page-grey-bg;
+     font-family: $regular-font;
+
+     .header-row {
+         height: 60px;
+         border-bottom: 1px solid $primary-grey;
+     }
+
+     h1,h2,h3,h4 {
+        font-family: $header-font;
+        color: $font-color2;
+     }
+
+     #calculate_funding_req_btn {
+         cursor: pointer;
+         text-decoration: underline;
+     }
+
+     .funding-options-con {
+        button.btn {
+            border: 1px solid $shade-grey;
+            border-radius: 14px;
+            margin: 10px 10px 5px 0;
+            color: $primary-font-color;
+        }
+     }
+ }
+ 
