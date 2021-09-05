@@ -9,7 +9,7 @@
       <div class="col-12 col-md-6">
         <div>
           <h4 class="mt-5">Let's get to know your financing needs</h4>
-          <a id="calculate_funding_req_btn">Calculate your funding needs</a>
+          <a id="calculate_funding_req_btn" (click)="showModalDialog()">Calculate your funding needs</a>
         </div>
         <div class="funding-options-con mt-3">
           <button type="button" class="btn ">Holiday Loan</button>
@@ -33,3 +33,29 @@
       </div>
     </div>
   </div>
+
+  <p-dialog header="Calculate your funding needs" [(visible)]="displayModal" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [modal]="true" [style]="{width: '60vw'}"
+    [draggable]="false" [resizable]="false">
+    <div class="row">
+      <div class="col-4">
+        <h5>Amount you need: {{amt_need}}</h5>
+        <p-slider [min]="10000" [max]="10000000" [(ngModel)]="amt_need"></p-slider>
+      </div>
+      <div class="col-4">
+        <h5>Tenure: {{tenure}}</h5>
+        <p-slider [min]="12" [max]="120" [(ngModel)]="tenure"></p-slider>
+      </div>
+      <div class="col-4">
+        <h5>Interest Rate: {{interest_rate}}</h5>
+        <p-slider [min]="1" [max]="20" [(ngModel)]="interest_rate"></p-slider>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-end mt-5">
+        <button class="btn btn-warning text-end">Calculate</button>
+      </div>
+    </div>
+    <!-- <ng-template pTemplate="footer">
+      <p-button icon="pi pi-check" (click)="displayModal=false" label="Ok" styleClass="p-button-text"></p-button>
+    </ng-template> -->
+</p-dialog>
