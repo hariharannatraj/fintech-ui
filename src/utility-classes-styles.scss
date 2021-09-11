@@ -1,0 +1,39 @@
+@import "./variables.scss";
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.p-relative {
+    position: relative;
+}
+.p-absolute {
+    position: absolute;
+}
+
+.header-text {
+    font-family: $header-font;
+    font-size: 1.5rem!important;
+    color: #171414;
+}
+
+b {
+    font-family: $semi-bold-font;
+}
+
+.action-confirm-btn {
+    font-family: $semi-bold-font;
+    padding: 8px 25px;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 18px;
+    background-color: $stepper-active-font-color;
+}
+
+.main-input{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid $font-color1;
+}

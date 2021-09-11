@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./variables.scss";
+@import "./utility-classes-styles.scss";
 @import "../node_modules/primeicons/primeicons.css";
 @import "../node_modules/primeng/resources/themes/saga-blue/theme.css";
 @import "../node_modules/primeng/resources/primeng.min.css";
@@ -13,16 +14,16 @@
     font-family: regular_font;
     src: url("../src/assets/fonts/Libre_Franklin/LibreFranklin-Medium.ttf");
   }
+
+  @font-face {
+      font-family: semi_bold;
+      src: url("../src/assets/fonts/Libre_Franklin/LibreFranklin-Bold.ttf");
+  }
   
 
  body {
      background-color: $page-grey-bg;
      font-family: $regular-font;
-
-     .header-row {
-         height: 60px;
-         border-bottom: 1px solid $primary-grey;
-     }
 
      h1,h2,h3,h4 {
         font-family: $header-font;
@@ -42,5 +43,15 @@
             color: $primary-font-color;
         }
      }
+
+    //  p-dialog styles
+    p-dialog {
+        font-family: $semi-bold-font;
+        .p-dialog-title {
+            @extend .header-text;
+        }
+    }
  }
+
+ 
  

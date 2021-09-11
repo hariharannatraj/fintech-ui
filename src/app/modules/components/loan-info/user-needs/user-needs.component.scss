@@ -1,0 +1,53 @@
+@import "./../../../../../stepper-styles.scss";
+@import "./../../../../../utility-classes-styles.scss";
+
+.slider-con {
+    .header-txt {
+        font-size: 1rem;
+        color: #2e2727;
+        font-family: $header-font;
+    }
+
+    ::ng-deep .p-slider.p-slider-horizontal {
+        height: 7px;
+    }
+
+    .slider-value {
+        display: flex;
+        padding: 2px 5px;
+        border: 1px solid#3f976c;
+        border-radius: 7px;
+        color: #3f976c;
+    }
+
+    ::ng-deep .p-slider {
+        background: #fae1b1;
+        .p-slider-handle {
+            border: 2px solid #3f976c;
+            &:hover {
+                background: #3f976c;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .p-slider-range {
+            background: #3f976c;
+            border-radius: 7px;
+        }
+    }
+}
+
+.value-label {
+    color: $primary-grey;
+    font-size: 1rem;
+}
+
+.funding-options-con {
+    button.active {
+        background-color: $primary-green;
+        color: #fff;
+    }
+}
+
+
