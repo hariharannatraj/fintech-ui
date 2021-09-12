@@ -10,6 +10,8 @@ import { UserNeedsComponent } from './user-needs/user-needs.component';
 import { UserAuthenticationComponent } from './user-authentication/user-authentication.component';
 import { LoanOffersComponent } from './loan-offers/loan-offers.component';
 import { LoanApprovalComponent } from './loan-approval/loan-approval.component';
+import { LoanInfoComponent } from '../loan-info/loan-info.component';
+import { StepperComponent } from './stepper/stepper.component'
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { LoanApprovalComponent } from './loan-approval/loan-approval.component';
     UserNeedsComponent,
     UserAuthenticationComponent,
     LoanOffersComponent,
-    LoanApprovalComponent
+    LoanApprovalComponent,
+    LoanInfoComponent,
+    StepperComponent
   ],
   imports: [
     CommonModule,

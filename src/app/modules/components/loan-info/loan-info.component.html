@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="header-row row p-2">
+        <div class="img-con" style="width: 100px;">
+          <img src="./../../../../../assets/images/logo.png" alt="" style="width: 100%;">
+        </div>
+    </div>
+</div>
+<hr class="m-0">
+<div class="container">
+    <div class="body-row row">
+        <div class="col-12 col-md-6">
+            <app-user-needs (nextStage)="Showcontent($event)" *ngIf="currStage == 'userneeds'"></app-user-needs>
+            <app-user-authentication *ngIf="currStage == 'userauth'"></app-user-authentication>
+        </div>
+        <div class="col-12 col-md-6">
+            <app-stepper></app-stepper>
+        </div>
+    </div>
+</div>
