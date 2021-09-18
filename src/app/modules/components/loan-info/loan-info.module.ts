@@ -12,7 +12,8 @@ import { LoanOffersComponent } from './loan-offers/loan-offers.component';
 import { LoanApprovalComponent } from './loan-approval/loan-approval.component';
 import { LoanInfoComponent } from '../loan-info/loan-info.component';
 import { StepperComponent } from './stepper/stepper.component'
-
+import {TooltipModule} from 'primeng/tooltip';
+import { OnlynumberDirective} from './../../../shared/directives/onlynumber.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { StepperComponent } from './stepper/stepper.component'
     LoanOffersComponent,
     LoanApprovalComponent,
     LoanInfoComponent,
-    StepperComponent
+    StepperComponent,
+    OnlynumberDirective
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import { StepperComponent } from './stepper/stepper.component'
     ButtonModule,
     SliderModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    TooltipModule
   ],
   entryComponents: [UserNeedsComponent]
 })

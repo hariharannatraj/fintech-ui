@@ -51,7 +51,37 @@
             @extend .header-text;
         }
     }
+
+    .p-tooltip .p-tooltip-text {
+        background-color: #fff;
+        color: $primary-font-color;
+    }
+
+    .p-tooltip .p-tooltip-arrow {
+        border-top-color: #fff!important;
+    }
  }
 
  
  
+// Media queries
+@media only screen and (max-width: 576px) {
+    body {
+        .funding-options-con button.btn {
+            margin: 4px 4px 4px 0;
+            padding: 4px;
+            font-size: 12px;
+        }
+        app-stepper .stepper-con + .img-con {
+            width: 85vw!important;
+        }
+
+        .stepper-horizontal .step {
+            padding: 1.5rem 0 0 0 !important;
+
+            .step-optional {
+                font-size: 0.8rem;
+            }
+        }
+    }
+  }

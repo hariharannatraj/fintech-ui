@@ -13,7 +13,7 @@
             <app-user-authentication *ngIf="currStage == 'userauth'"></app-user-authentication>
         </div>
         <div class="col-12 col-md-6">
-            <app-stepper></app-stepper>
+            <app-stepper [currStage]="currStage"></app-stepper>
         </div>
     </div>
 </div>

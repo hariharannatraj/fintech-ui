@@ -11,12 +11,23 @@
         height: 7px;
     }
 
+    .value-con {
+        max-width: 45%;
+        position: relative;
+
+        .value-label {
+            color: #3f976c;
+            position: absolute;
+        }
+    }
     .slider-value {
         display: flex;
         padding: 2px 5px;
         border: 1px solid#3f976c;
         border-radius: 7px;
         color: #3f976c;
+        outline: none;
+        width: 100%;
     }
 
     ::ng-deep .p-slider {
@@ -44,6 +55,11 @@
 
 .funding-options-con {
     button.active {
+        background-color: $primary-green;
+        color: #fff;
+    }
+
+    button:hover {
         background-color: $primary-green;
         color: #fff;
     }

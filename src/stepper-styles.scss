@@ -14,13 +14,13 @@
           position:relative;
           padding:1.5rem;
           z-index: 2;
-        width: 25%;
+          cursor: pointer;
+          width: 25%;
           &:last-child .step-bar-left,
           &:last-child .step-bar-right {
               display:none;
           }
           .stage-btn-click {
-              cursor: pointer;
               display: inline;
           }
           .step-circle {
