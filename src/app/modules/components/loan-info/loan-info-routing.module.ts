@@ -7,8 +7,8 @@ import { LoanOffersComponent } from './loan-offers/loan-offers.component';
 import { LoanApprovalComponent } from './loan-approval/loan-approval.component';
 
 const routes: Routes = [
-  { path: '', component: LoanInfoComponent },
-  { path: 'user-needs', component: LoanInfoComponent },
+  { path: '', component: UserNeedsComponent },
+  { path: 'user-needs', component: UserNeedsComponent },
   { path: 'user-authentication', component: UserAuthenticationComponent },
   { path: 'loan-offers', component: LoanOffersComponent },
   { path: 'loan-approval', component: LoanApprovalComponent }

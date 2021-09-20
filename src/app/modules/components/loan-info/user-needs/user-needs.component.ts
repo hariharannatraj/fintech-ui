@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 
 
@@ -10,7 +10,6 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 
 export class UserNeedsComponent implements OnInit {
-  @Output() nextStage = new EventEmitter<string>();
   displayModal!: boolean;
   amt_need: number = 10000;
   tenure: number = 12;
@@ -56,10 +55,6 @@ export class UserNeedsComponent implements OnInit {
     loan.isClicked = true;
     this.showNextBtn = true;
 
-  }
-
-  goNextStage(userauth:string) {
-    this.nextStage.emit(userauth);
   }
 
 }

@@ -11,9 +11,11 @@ import { UserAuthenticationComponent } from './user-authentication/user-authenti
 import { LoanOffersComponent } from './loan-offers/loan-offers.component';
 import { LoanApprovalComponent } from './loan-approval/loan-approval.component';
 import { LoanInfoComponent } from '../loan-info/loan-info.component';
-import { StepperComponent } from './stepper/stepper.component'
 import {TooltipModule} from 'primeng/tooltip';
-import { OnlynumberDirective} from './../../../shared/directives/onlynumber.directive';
+import { floatingnumberDirective} from '../../../shared/directives/floatingvalue.directive';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import { CheckboxModule } from 'primeng/checkbox';
+
 
 @NgModule({
   declarations: [
@@ -22,8 +24,7 @@ import { OnlynumberDirective} from './../../../shared/directives/onlynumber.dire
     LoanOffersComponent,
     LoanApprovalComponent,
     LoanInfoComponent,
-    StepperComponent,
-    OnlynumberDirective
+    floatingnumberDirective
   ],
   imports: [
     CommonModule,
@@ -33,7 +34,9 @@ import { OnlynumberDirective} from './../../../shared/directives/onlynumber.dire
     SliderModule,
     InputTextModule,
     FormsModule,
-    TooltipModule
+    TooltipModule,
+    RadioButtonModule,
+    CheckboxModule
   ],
   entryComponents: [UserNeedsComponent]
 })

@@ -13,8 +13,5 @@ export class LoanInfoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  Showcontent(stageName: string) {
-    this.currStage = stageName;
-  }
 
 }

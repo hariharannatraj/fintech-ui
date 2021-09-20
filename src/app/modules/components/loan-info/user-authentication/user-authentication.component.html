@@ -1,18 +1,216 @@
-<div>
-  <h4 class="mt-5 p-relative">
-    Let's quickly verify your identity
-  </h4>
-  <div class="p-relative" style="font-size: 20px;">
-    <i class="fa fa-long-arrow-right p-absolute" aria-hidden="true" style="left: -42px;font-size: 2rem;"></i>
-    Enter your AADHAAR Number
+
+
+<div class="container">
+  <div class="header-row row p-2">
+      <div class="img-con" style="width: 100px;">
+        <img src="./../../../../../assets/images/logo.png" alt="" style="width: 100%;">
+      </div>
   </div>
-  <div class="mt-3 mb-4">
-    <input type="text" class="main-input">
-  </div>
-  <button class="btn action-confirm-btn">Authenticate</button>
-  <p class="mt-3" style="color: #b0adad;font-size: 13px;">
-    <b style="color: #615f5a;">Aadhaar</b> Card gives you easy access to numerous <b style="color: #615f5a;">loans</b> and other financial services. <br>
-    The loan applicants are asked to provide Know Your Customer (KYC) documents and <br> <b style="color: #615f5a;">Aadhaar</b> Card is a solid proof
-    of your citizenship and identity.
-  </p>
 </div>
+<hr class="m-0">
+<div class="container user-authentication-con">
+  <div class="body-row row">
+      <div class="col-12 col-md-6">
+        <div class="">
+          <h4 class="mt-5 p-relative">
+            Let's quickly verify your identity
+          </h4>
+          <div class="aadhar-con">
+            <div class="p-relative" style="font-size: 20px;">
+              <i class="fa fa-long-arrow-right p-absolute" aria-hidden="true" style="left: -42px;font-size: 2rem;"></i>
+              Enter your AADHAAR Number
+            </div>
+            <div class="mt-3 mb-4">
+              <input type="text" class="main-input" pattern="[0-9]*" maxlength="12" numbersOnly>
+            </div>
+            <button class="btn action-confirm-btn" (click)="showAuthenticateModalDialog()">Authenticate</button>
+            <p class="mt-3" style="color: #b0adad;font-size: 13px;">
+              <b style="color: #615f5a;">Aadhaar</b> Card gives you easy access to numerous <b style="color: #615f5a;">loans</b> and other financial services. <br>
+              The loan applicants are asked to provide Know Your Customer (KYC) documents and <br> <b style="color: #615f5a;">Aadhaar</b> Card is a solid proof
+              of your citizenship and identity.
+            </p>
+          </div>
+        
+          <div class="pan-con d-none">
+            <div class="p-relative" style="font-size: 20px;">
+              <i class="fa fa-long-arrow-right p-absolute" aria-hidden="true" style="left: -42px;font-size: 2rem;"></i>
+              Enter your PAN Number
+            </div>
+            <div class="mt-3 mb-4">
+              <input type="text" class="main-input" pattern="[0-9]*" maxlength="12" numbersOnly>
+            </div>
+            <button class="btn action-confirm-btn">Continue</button>
+            <p class="mt-3" style="color: #b0adad;font-size: 13px;">
+              When applying for a <b style="color: #615f5a;">personal loan</b>, per the guidelines set by financial lenders, it is<br>
+              <b style="color: #615f5a;">mandatory</b> to submit one's <b style="color: #615f5a;">PAN</b> card as it is<b style="color: #615f5a;">mandatory</b> by the tax laws.
+            </p>
+          </div>
+        </div>
+
+        <div class="choose-profession-con d-none">
+          <form action="">
+            <h4 class="mt-5 p-relative">
+              <i class="fa fa-long-arrow-right p-absolute" aria-hidden="true" style="left: -42px;font-size: 2rem;"></i>
+              Almost done, just a few more details
+            </h4>
+            <div class="form-header-con">
+              <p class="p-dialog-title">Choose your Profession</p>
+              <div class="d-flex">
+                <div class="p-field-radiobutton d-flex align-items-center">
+                  <p-radioButton name="groupname" value="val1" [(ngModel)]="selectedValue"></p-radioButton>
+                  <label class="ms-3" for=""><i class="fa fa-user-o" aria-hidden="true"></i> Salaried</label>
+                </div>
+                <div class="p-field-radiobutton d-flex align-items-center mx-5">
+                  <p-radioButton name="groupname" value="val2" [(ngModel)]="selectedValue"></p-radioButton>
+                  <label class="ms-3" for=""><i class="fa fa-briefcase" aria-hidden="true"></i> Self Employed</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-body">
+              <div class="row form-elements-con">
+                <div class="col-6 col-md-6">
+                  <div class="form-group p-relative">
+                    <label for="">Name your Organization</label>
+                    <input type="text" class="main-input">
+                    <i class="fa fa-exclamation-circle p-absolute" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-group p-relative">
+                    <label for="">Monthly Income (In-Hand)</label>
+                    <input type="text" class="main-input">
+                    <i class="fa fa-exclamation-circle p-absolute" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-group p-relative">
+                    <label for="">Desired Funding Amount</label>
+                    <input type="text" class="main-input">
+                    <i class="fa fa-exclamation-circle p-absolute" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-group p-relative">
+                    <label for="">Loan Tenure</label>
+                    <input type="text" class="main-input">
+                    <i class="fa fa-exclamation-circle p-absolute" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="form-group p-relative">
+                    <label for="">Mother's Maiden Name</label>
+                    <input type="text" class="main-input ">
+                    <i class="fa fa-exclamation-circle p-absolute" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="form-upload-con mt-4">
+              <div class="col-12 col-md-12">
+                <div class="form-group d-flex justify-content-between align-items-center">
+                  <label for="">Upload your last 3 months salary slips</label>
+                  <button class="upload-btn d-flex align-items-center">
+                    <i class="fa fa-cloud-upload mx-2" aria-hidden="true"></i>
+                    <span>Upload</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="mt-5 p-relative">
+              <i class="fa fa-long-arrow-right p-absolute" aria-hidden="true" style="left: -42px;font-size: 2rem;"></i>
+              Please provide consent
+            </h4>
+            <div class="p-field-checkbox d-flex align-items-center terms-conditions-con mt-4 mb-4">
+              <p-checkbox [(ngModel)]="checked" binary1="true" inputId="binary1"></p-checkbox>
+              <label for="binary1" class="conditions-text">
+                I hereby provide consent to use PAN details mentioned above to fetch Credit Bureau
+                and I agree to <a href="">Terms & Conditions</a> and <a href="">Privacy Policy</a>
+              </label>
+            </div>
+            <div class="submit-btn-con d-flex align-items-center mb-5"> 
+              <button class="btn action-confirm-btn" tabindex="0">Submit 
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </button>
+              <label class="conditions-text">
+                We intend to ask only the relevant questions,
+                They will appear as we know about your needs
+              </label>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="stepper-con mt-4">
+          <div class="stepper-horizontal" id="stepper1">
+            <div class="step done">
+              <div class="step-circle"></div>
+              <div class="stage-btn-click">
+                <div class="step-title">1</div>
+                <div class="step-optional">Specify Your Needs</div>
+              </div>
+              <div class="step-bar-left"></div>
+              <div class="step-bar-right"></div>
+            </div>
+            <div class="step editing">
+              <div class="step-circle"></div>
+              <div class="stage-btn-click">
+                <div class="step-title">2</div>
+                <div class="step-optional">User Authentication</div>
+              </div>
+              <div class="step-bar-left"></div>
+              <div class="step-bar-right"></div>
+            </div>
+            <div class="step">
+              <div class="step-circle"></div>
+              <div class="stage-btn-click">
+                <div class="step-title">3</div>
+                <div class="step-optional">Loan Offers</div>
+              </div>
+              <div class="step-bar-left"></div>
+              <div class="step-bar-right"></div>
+            </div>
+            <div class="step">
+              <div class="step-circle"></div>
+              <div class="stage-btn-click">
+                <div class="step-title">4</div>
+                <div class="step-optional">Loan Approval</div>
+              </div>
+              <div class="step-bar-left"></div>
+              <div class="step-bar-right"></div>
+            </div>
+          </div>
+        
+        </div>
+        <div class="stage-img-con" style="width: 31vw;margin: 0 auto;">
+            <img class="img-fluid" src="./../../../../../assets/images/screen2.png" alt="">
+        </div>
+      </div>
+  </div>
+</div>
+
+<p-dialog header="Authenticate your AADHAR" [(visible)]="AadharAuthenticateModal" [modal]="true" [style]="{width: '30vw'}"
+    [draggable]="false" [resizable]="false">
+    <form action="">
+      <div class="form-group">
+        <label for="">Enter OTP</label>
+        <input type="text" class="main-input form-control">
+      </div>
+      <div class="text-end mt-2">
+        <a class="resend-btn" href="">Resend OTP</a>
+      </div>
+      <div class="mt-4">
+        <button class="btn action-confirm-btn" (click)="showAadharSuccessModal()" style="width: 100%;">Confirm</button>
+      </div>
+    </form>
+</p-dialog>
+
+<p-dialog header="Aadhar Verified Successfully" [(visible)]="AadharSuccessModal" [modal]="true" [style]="{width: '30vw'}"
+    [draggable]="false" [resizable]="false">
+    <div class="mt-4 text-center">
+      <button class="btn action-confirm-btn" (click)="AadharSuccessModal=false">Close</button>
+    </div>
+</p-dialog>

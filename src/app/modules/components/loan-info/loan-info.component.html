@@ -9,11 +9,9 @@
 <div class="container">
     <div class="body-row row">
         <div class="col-12 col-md-6">
-            <app-user-needs (nextStage)="Showcontent($event)" *ngIf="currStage == 'userneeds'"></app-user-needs>
-            <app-user-authentication *ngIf="currStage == 'userauth'"></app-user-authentication>
         </div>
         <div class="col-12 col-md-6">
-            <app-stepper [currStage]="currStage"></app-stepper>
+
         </div>
     </div>
 </div>

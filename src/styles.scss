@@ -49,6 +49,7 @@
         font-family: $semi-bold-font;
         .p-dialog-title {
             @extend .header-text;
+            font-family: $semi-bold-font;
         }
     }
 
@@ -62,6 +63,139 @@
     }
  }
 
+ .p-radiobutton {
+    .p-radiobutton-box.p-highlight:not(.p-disabled) {
+        background: $stepper-active-font-color;
+        border-color: $stepper-active-font-color;
+    }
+
+    .p-radiobutton-box {
+        &:hover {
+            border-color: $stepper-bar-color!important;
+            background: $stepper-active-font-color!important;
+        }
+    }
+
+    .p-radiobutton-box.p-focus {
+        box-shadow: none!important;
+    }
+ }
+
+ .p-checkbox .p-checkbox-box.p-highlight,
+ .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover, 
+ .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus,
+ .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+    background: $stepper-active-font-color;
+    border-color: $stepper-active-font-color!important;
+    box-shadow: none!important;
+ }
+
+//  stepper styles
+  $border-color: #D9E2EC;
+  $text-color: #102A43;
+  $text-color-inactive: #829AB1;
+  $text-color-optional: #9FB3C8;
+  
+  .stepper-horizontal {
+      display:table;
+      width:100%;
+      margin:0 auto;
+      .step {
+          display:table-cell;
+          position:relative;
+          padding:1.5rem;
+          z-index: 2;
+          width: 25%;
+          &:last-child .step-bar-left,
+          &:last-child .step-bar-right {
+              display:none;
+          }
+          .stage-btn-click {
+              display: inline;
+          }
+          .step-circle {
+              width:1rem;
+              height:1rem;
+              margin:0 auto;
+              border-radius: 50%;
+              text-align: center;
+              line-height:1.75rem;
+              font-size: 1rem;
+              font-weight: 600;
+              z-index:2;
+              border: 2px solid $stepper-bar-color;
+              display: none;
+          }
+  
+          &.done {
+              .step-circle {
+                  background-color:$shade-green;
+                  border: 2px solid $shade-green;
+                  color:#FFFFFF;
+                  display:block;
+              }
+              .step-title, .step-optional {
+                  color:$stepper-active-font-color;
+              }
+          }
+  
+          &.editing {
+              .step-circle {
+                background-color: $shade-green;
+                border: 2px solid $shade-green;
+                color: #FFFFFF;
+                display:block;
+              }
+              .step-title, .step-optional {
+                  color:$shade-green;
+              }
+          }
+          
+  
+          .step-title {
+              margin-top:1rem;
+              font-size:1rem;
+              font-weight:600;
+          }
+          .step-title, .step-optional {
+              text-align: center;
+              color: $primary-grey;
+          }
+          .step-optional {
+              color: $primary-grey;
+          }
+  
+          .step-bar-left, .step-bar-right {
+              position:absolute;
+              top:calc(1rem + 13px);
+              height: 2px;
+              background-color: $stepper-bar-color;
+              border: solid $stepper-bar-color;
+              border-width: 2px 0;
+          }
+          .step-bar-left {
+              width: 100%;
+              left:50%;
+              margin-left:0.5rem;
+              z-index:-1;
+          }
+          .step-bar-right {
+              width:0;
+              left:50%;
+              margin-left:0.5rem;
+              z-index:-1;
+            transition: width 500ms ease-in-out;
+          }
+  
+          &.done .step-bar-right {
+              background-color:$shade-green;
+              border-color: $shade-green;
+              z-index: 3;
+              width: calc(100% - 1rem);
+          }
+      }
+  }
+  
  
  
 // Media queries
@@ -83,5 +217,21 @@
                 font-size: 0.8rem;
             }
         }
+
+        .user-authentication-con {
+            .choose-profession-con .submit-btn-con .action-confirm-btn {
+                padding: 0.5rem 1rem!important;
+                font-size: 0.8rem;
+                .fa-angle-right {
+                    right: 8px!important;
+                    top: 10px!important;
+                    font-size: 0.8rem!important;
+                }
+            }
+            .stage-img-con {
+                width: 45vw!important;
+            }
+        }
+        
     }
   }

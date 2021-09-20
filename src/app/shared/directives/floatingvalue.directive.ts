@@ -1,15 +1,16 @@
 import { Directive, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[numbersOnly]',
+  selector: '[floatingValue]',
 })
-export class NumberOnlyDirective {
+export class floatingnumberDirective {
   private static readonly allowedKeyCodes = [
     "Backspace",
     "Delete",
     "Insert",
     "ArrowUp",
     "ArrowRight",
+    "Period",
     "ArrowDown",
     "ArrowLeft",
     "Tab",
@@ -42,7 +43,7 @@ export class NumberOnlyDirective {
   onKeyDown(e: KeyboardEvent) {
 
     const isCommandExecution = e.ctrlKey || e.metaKey || e.shiftKey || e.altKey;
-    const isKeyAllowed = NumberOnlyDirective.allowedKeyCodes.indexOf(e.code) !== -1;
+    const isKeyAllowed = floatingnumberDirective.allowedKeyCodes.indexOf(e.code) !== -1;
 
     if (!isCommandExecution && !isKeyAllowed) {
       e.preventDefault();

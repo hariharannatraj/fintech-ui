@@ -27,7 +27,7 @@ b {
     padding: 8px 25px;
     color: #fff;
     font-size: 1.2rem;
-    border-radius: 18px;
+    border-radius: 30px;
     background-color: $stepper-active-font-color;
 }
 
@@ -36,4 +36,10 @@ b {
     outline: 0;
     background: transparent;
     border-bottom: 1px solid $font-color1;
+    border-radius: 0;
+    padding: 3px 5px;
+    outline: none;
+    &:focus {
+        box-shadow: none;
+    }
 }
