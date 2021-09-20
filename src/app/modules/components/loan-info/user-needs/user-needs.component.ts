@@ -14,16 +14,15 @@ export class UserNeedsComponent implements OnInit {
   amt_need: number = 10000;
   tenure: number = 12;
   interest_rate: number = 5;
-  monthly_emi!: number;
+  monthly_emi!: string;
   showNextBtn = false;
   constructor(private primengConfig: PrimeNGConfig) { }
-  
   ngOnInit(): void {
     this.primengConfig.ripple = true;
   }
 
   calculate_emi() {
-    this.monthly_emi = this.amt_need * this.interest_rate * (1 + this.interest_rate)^this.tenure /  ((1 + this.interest_rate)^this.tenure - 1);
+    this.monthly_emi = ((this.amt_need * (this.interest_rate/ 1200)) / (1 - (Math.pow(1/(1 + (this.interest_rate/ 1200)), this.tenure)))).toFixed(0);
   }
 
   showModalDialog() {
