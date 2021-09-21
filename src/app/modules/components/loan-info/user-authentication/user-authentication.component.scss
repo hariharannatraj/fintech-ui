@@ -4,6 +4,16 @@
     font-family: $semi-bold-font;
 }
 
+.hidden-file-input {
+    width: 125px;
+    position: absolute;
+    right: 0;
+    padding: 5px 20px;
+    border-radius: 30px;
+    opacity: 0;
+    cursor: pointer;
+}
+
 .choose-profession-con {
     .form-header-con {
         min-height: 18vh;
@@ -46,9 +56,8 @@
         .upload-btn {
             background-color: $primary-green;
             color: #fff;
-            outline: none;
-            border: none;
             padding: 8px 20px;
+            width: 125px;
             border-radius: 30px;
             &:hover {
                 box-shadow: none;

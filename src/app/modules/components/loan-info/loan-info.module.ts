@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SliderModule} from 'primeng/slider';
 import {InputTextModule} from 'primeng/inputtext';
 import { LoanInfoRoutingModule } from './loan-info-routing.module';
@@ -12,6 +12,7 @@ import { LoanOffersComponent } from './loan-offers/loan-offers.component';
 import { LoanApprovalComponent } from './loan-approval/loan-approval.component';
 import { LoanInfoComponent } from '../loan-info/loan-info.component';
 import {TooltipModule} from 'primeng/tooltip';
+import { NumberOnlyDirective } from '../../../shared/directives/onlynumber.directive';
 import { floatingnumberDirective} from '../../../shared/directives/floatingvalue.directive';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
@@ -24,7 +25,8 @@ import { CheckboxModule } from 'primeng/checkbox';
     LoanOffersComponent,
     LoanApprovalComponent,
     LoanInfoComponent,
-    floatingnumberDirective
+    floatingnumberDirective,
+    NumberOnlyDirective
   ],
   imports: [
     CommonModule,
@@ -33,6 +35,7 @@ import { CheckboxModule } from 'primeng/checkbox';
     ButtonModule,
     SliderModule,
     InputTextModule,
+    ReactiveFormsModule,
     FormsModule,
     TooltipModule,
     RadioButtonModule,
