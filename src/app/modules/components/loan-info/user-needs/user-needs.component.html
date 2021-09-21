@@ -64,7 +64,7 @@
                 <div class="step-bar-right"></div>
               </div>
             </div>
-          
+
           </div>
           <div class="img-con" style="width: 31vw;margin: 0 auto;">
               <img class="img-fluid" src="./../../../../../assets/images/screen1.png" alt="">
@@ -77,28 +77,28 @@
     [draggable]="false" [resizable]="false">
     <div class="row slider-con">
       <div class="col-12 col-md-4 slider-area mb-3 mb-md-0">
-        <div class="d-flex justify-content-between align-items-center header-txt mb-2"> 
-          <span>Amount you need:</span> 
+        <div class="d-flex justify-content-between align-items-center header-txt mb-2">
+          <span>Amount you need:</span>
           <div class="value-con">
             <span class="value-label" style="top: 4px;left: 5px;">INR</span>
-            <input type="text" class="slider-value" [(ngModel)]="amt_need" floatingValue style="padding-left: 40px;">
-          </div> 
+            <input type="number" class="slider-value" numbersOnly [(ngModel)]="amt_need" floatingValue style="padding-left: 40px;">
+          </div>
         </div>
         <p-slider [min]="10000" [max]="10000000" [(ngModel)]="amt_need"></p-slider>
       </div>
       <div class="col-12 col-md-4 slider-area mb-3 mb-md-0">
         <div class="d-flex justify-content-between align-items-center header-txt mb-2">
-          <span>Tenure:</span> 
+          <span>Tenure:</span>
           <div class="value-con" style="width: 26%;">
-            <input type="text" class="slider-value" numbersOnly [(ngModel)]="tenure" style="padding-right: 30px;">
+            <input type="number" class="slider-value" numbersOnly [(ngModel)]="tenure" style="padding-right: 30px;">
             <span class="value-label" style="top: 4px;right: 5px;">Mo</span>
-          </div> 
+          </div>
         </div>
         <p-slider [min]="12" [max]="120" [(ngModel)]="tenure"></p-slider>
       </div>
       <div class="col-12 col-md-4 slider-area mb-3 mb-md-0">
         <div class="d-flex justify-content-between align-items-center header-txt mb-2">
-          <span>Interest Rate:</span> 
+          <span>Interest Rate:</span>
           <div class="value-con" style="width: 20%;">
             <input type="text" class="slider-value" [(ngModel)]="interest_rate" floatingValue style="padding-right: 20px;">
             <span class="value-label" style="top: 4px;right: 5px;">%</span>
@@ -119,11 +119,11 @@
       </div>
       <div class="col-4 col-md-3 d-flex flex-column">
         <div class="value-label">Total Interest Payable</div>
-        <div><b>INR 11,07,979</b></div>
+        <div><b>INR {{interest_payable}}</b></div>
       </div>
       <div class="col-4 col-md-4 d-flex flex-column">
         <div class="value-label">Total Payment (Principal + Interest)</div>
-        <div><b>INR 36,07,979</b></div>
+        <div><b>INR {{total_payment}}</b></div>
       </div>
     </div>
 </p-dialog>
