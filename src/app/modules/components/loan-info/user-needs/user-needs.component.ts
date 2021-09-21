@@ -11,10 +11,12 @@ import { PrimeNGConfig } from 'primeng/api';
 
 export class UserNeedsComponent implements OnInit {
   displayModal!: boolean;
-  amt_need: number = 10000;
+  amt_need: number = 100000;
   tenure: number = 12;
-  interest_rate: number = 5;
-  monthly_emi!: string;
+  interest_rate: number = 11;
+  interest_payable: number = 6056;
+  total_payment : number = 106056;
+  monthly_emi: number = 8838;
   showNextBtn = false;
   constructor(private primengConfig: PrimeNGConfig) { }
   ngOnInit(): void {
@@ -22,7 +24,10 @@ export class UserNeedsComponent implements OnInit {
   }
 
   calculate_emi() {
-    this.monthly_emi = ((this.amt_need * (this.interest_rate/ 1200)) / (1 - (Math.pow(1/(1 + (this.interest_rate/ 1200)), this.tenure)))).toFixed(0);
+    this.monthly_emi = (this.amt_need * (this.interest_rate/ 1200)) / (1 - (Math.pow(1/(1 + (this.interest_rate/ 1200)), this.tenure)));
+    this.interest_payable =  Math.ceil((this.tenure * this.monthly_emi)  - this.amt_need);
+    this.total_payment = this.interest_payable + this.amt_need;
+    this.monthly_emi = Math.ceil(this.monthly_emi);
   }
 
   showModalDialog() {
