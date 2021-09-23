@@ -1,10 +1,10 @@
-version: 0.1
+version: 1.0
 
 phases:
   install:
     commands:
       - echo installing nodejs...
-      - sudo apt install -y nodejs
+      - apt-get install -y nodejs
   pre_build:
     commands:
       - echo installing dependencies...
